@@ -1,0 +1,42 @@
+Total Number of Packags
+========================
+
+SELECT
+  (SELECT COUNT(DISTINCT key) FROM Name)
++ (SELECT COUNT(*) FROM (
+       SELECT key
+       FROM Name
+       GROUP BY key
+       HAVING COUNT(*) > 1
+  )) AS rpm_instance_count;
+
+
+Total Number of Packages
+========================
+
+select count(*) from Packages;
+
+Total number of Packages from Sha1header
+=========================================
+select count(*) from Sha1header;
+721
+
+
+
+Total Packages | unique Packages | duplicate Packages 
+
+SELECT
+  (SELECT COUNT(*) FROM Packages)                           AS rpm_instances,
+  (SELECT COUNT(DISTINCT key) FROM Name)                    AS unique_names,
+  (SELECT COUNT(*) FROM (
+       SELECT key FROM Name GROUP BY key HAVING COUNT(*)>1
+   ))                                                       AS duplicate_names;
+721|716|5
+
+
+list all Packages Similar to rpm -aq 
+=====================================
+
+SELECT key FROM Name;
+
+

@@ -1,0 +1,107 @@
+# ================================
+# Black Hole ASCII (Zsh Native)
+# ================================
+
+blackhole_ascii() {
+
+  # Run only in interactive shells
+  [[ $- != *i* ]] && return
+
+  # Zsh color definitions
+  local RED='%F{red}'
+  local ORANGE='%F{yellow}'
+  local YELLOW='%F{orange}'
+  local RESET='%f'
+
+  print -P "$YELLOW⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+  print -P "$YELLOW⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+
+  print -P "$ORANGE⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⢠⢀⡐⢄⢢⡐⢢⢁⠂⠄⠠⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+  print -P "$ORANGE⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡄⣌⠰⣘⣆⢧⡜⣮⣱⣎⠷⣌⡞⣌⡒⠤⣈⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+
+  print -P "$RED⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠢⠱⡜⣞⣳⠝⣘⣭⣼⣾⣷⣶⣶⣮⣬⣥⣙⠲⢡⢂⠡⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+  print -P "$RED⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠢⣑⢣⠝⣪⣵⣾⣿⣿⣿⣿⣿⣿⣿⣿⣶⣯⣻⢦⣍⠢⢅⢂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+  print -P "$RED⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⢆⡱⠌⣡⢞⣵⣿⣿⣿⠿⠛⠛⠉⠉⠛⠛⠿⢷⣽⣻⣦⣎⢳⣌⠆⡱⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+
+  print -P "$ORANGE⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠂⠠⠌⢢⢃⡾⣱⣿⢿⡾⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣏⠻⣷⣬⡳⣤⡂⠜⢠⡀⣀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+  print -P "$ORANGE⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⢀⠂⣌⢃⡾⢡⣿⢣⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⡇⡊⣿⣿⣾⣽⣛⠶⣶⣬⣭⣥⣙⣚⢷⣶⠦⡤⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+  print -P "$ORANGE⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⢁⠂⠰⡌⡼⠡⣼⢃⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣾⡿⠿⣛⣯⡴⢏⠳⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+
+  print -P "$YELLOW⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠑⡌⠀⣉⣾⣩⣼⣿⣾⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣠⣤⣤⣿⣿⣿⣿⡿⢛⣛⣯⣭⠶⣞⠻⣉⠒⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+  print -P "$YELLOW⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡶⢝⣢⣾⣿⣼⣿⣿⣿⣿⣿⣀⣼⣀⣀⣀⣤⣴⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⣿⠿⡛⠏⠍⠂⠁⢠⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+  print -P "$YELLOW⠀⠀⠀⠠⢀⢥⣰⣾⣿⣯⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⣽⠟⣿⠐⠨⠑⡀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+  print -P "$YELLOW⠀⠀⡐⢢⣟⣾⣿⣿⣟⣛⣿⣿⣿⣿⢿⣝⠻⠿⢿⣯⣛⢿⣿⣿⣿⡛⠻⠿⣛⠻⠛⡛⠩⢁⣴⡾⢃⣾⠇⢀⠡⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+  print -P "$YELLOW⠀⠀⠈⠁⠊⠙⠉⠩⠌⠉⠢⠉⠐⠈⠂⠈⠁⠉⠂⠐⠉⣻⣷⣭⠛⠿⣶⣦⣤⣤⣴⣴⡾⠟⣫⣾⣿⡏⠀⠂⠐⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+  print -P "$YELLOW⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⢻⢿⢶⣤⣬⣉⣉⣭⣤⣴⣿⣿⡿⠃⠄⡈⠁⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+  print -P "$YELLOW⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠘⢊⠳⠭⡽⣿⠿⠿⠟⠛⠉⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀$RESET"
+}
+
+blackhole_data() {
+
+  [[ $- != *i* ]] && return
+
+  local CYAN='%F{cyan}'
+  local ORANGE='%F{yellow}'
+  local RED='%F{red}'
+  local GREEN='%F{green}'
+  local DIM='%F{240}'
+  local RESET='%f'
+
+  # Compact fixed panel
+  local PANEL_WIDTH=36
+  local OFFSET=2
+
+  right_block() {
+    local text="$1"
+    local pad=$(( COLUMNS - PANEL_WIDTH - OFFSET ))
+    (( pad < 0 )) && pad=0
+
+    while IFS= read -r line; do
+      print -P "$(printf '%*s' $pad '')${line}"
+    done <<< "$text"
+  }
+
+  local PANEL=$(cat <<EOF
+${CYAN}BLACK HOLE TELEMETRY${RESET}
+${DIM}──────────────────────────${RESET}
+${ORANGE}Type:${RESET} Kerr (rotating)
+${ORANGE}Mass:${RESET} 4.3×10⁶ M☉
+${ORANGE}Spin (a*):${RESET} 0.94
+${ORANGE}Distance:${RESET} 26k ly
+
+${RED}Event Horizon:${RESET}
+  r₊ = GM/c² (1 + √(1−a*²))
+
+${RED}Ergosphere:${RESET}
+  rₑ = GM/c² (1 + √(1−a*² cos²θ))
+
+${RED}Singularity:${RESET}
+  Ring, r = 0
+
+${DIM}Notes:${RESET}
+  Frame dragging active
+  Energy extraction possible
+EOF
+)
+
+  # Hawking Radiation (once per day)
+  local today=$(date +%Y-%m-%d)
+  local state_file="$HOME/.cache/.hawking_radiation"
+
+  if [[ ! -f "$state_file" ]] || [[ "$(cat $state_file)" != "$today" ]]; then
+    mkdir -p "$HOME/.cache" 2>/dev/null
+    echo "$today" >| "$state_file"
+
+    PANEL+=$'\n'
+    PANEL+="${GREEN}Hawking Radiation:${RESET}"
+    PANEL+=$'\n'"  T ∝ 1 / M"
+    PANEL+=$'\n'"  Slow mass evaporation"
+  fi
+
+  right_block "$PANEL"
+}
+
+
+# Call it
+blackhole_ascii
+blackhole_data

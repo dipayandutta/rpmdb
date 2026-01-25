@@ -1,0 +1,39 @@
+# Main prompt character
+# You may need to copy-paste this character if it doesn't show up: 
+ARROW=""
+
+# --- COLOR DEFINITIONS ---
+
+# Segment Colors (Text and Background)
+# We use progressively lighter shades of red for the background.
+C_USER='\[\e[1;37;48;5;88m\]'   # Bold White text on Dark Red background
+C_HOST='\[\e[1;37;41m\]'       # Bold White text on Medium Red background
+C_PATH='\[\e[1;37;48;5;52m\]'  # Bold White text on Maroon background
+C_DATE='\[\e[0;37;100m\]'      # White text on Dark Grey background
+
+# Arrow Transition Colors
+# Format: \[\e[{PREVIOUS_BG};{NEXT_BG}m\]
+# The foreground of the arrow is the background of the previous segment.
+A_USER_HOST='\[\e[38;5;88;41m\]'      # Dark Red FG on Medium Red BG
+A_HOST_PATH='\[\e[31;48;5;52m\]'     # Medium Red FG on Maroon BG
+A_PATH_DATE='\[\e[38;5;52;100m\]'    # Maroon FG on Dark Grey BG
+A_DATE_END='\[\e[90;49m\]'           # Dark Grey FG on Default BG
+
+# Reset color
+C_RESET='\[\e[0m\]'
+
+# --- BUILD THE PS1 STRING ---
+# This assembles the prompt segment by segment.
+PS1=""
+PS1+="${C_USER} \u ${C_RESET}"             # Segment 1: User
+PS1+="${A_USER_HOST}${ARROW}${C_RESET}"    # Arrow 1
+PS1+="${C_HOST} \h ${C_RESET}"             # Segment 2: Hostname
+PS1+="${A_HOST_PATH}${ARROW}${C_RESET}"    # Arrow 2
+PS1+="${C_PATH} \w ${C_RESET}"             # Segment 3: Current Directory
+PS1+="${A_PATH_DATE}${ARROW}${C_RESET}"    # Arrow 3
+PS1+="${C_DATE} \D{%a %d} ${C_RESET}"      # Segment 4: Date (e.g., Tue 30)
+PS1+="${A_DATE_END}${ARROW}${C_RESET}"     # Final arrow to terminate the line
+PS1+=" \n\$ "                             # Newline and the final prompt symbol ($)
+
+export PS1
+

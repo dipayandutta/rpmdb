@@ -1,0 +1,47 @@
+# Powerline separator
+ARROW=""
+
+# --- SEGMENT COLORS ----------------------------------------------------------
+C_USER='\[\e[1;37;48;5;27m\]'       # white on deep blue
+C_HOST='\[\e[1;37;48;5;45m\]'       # white on bright cyan
+C_PATH='\[\e[1;37;48;5;197m\]'      # white on vivid red
+C_GIT='\[\e[1;37;48;5;93m\]'        # white on magenta
+C_TIME='\[\e[1;30;48;5;226m\]'      # black on yellow
+C_RESET='\[\e[0m\]'                 # reset
+
+# --- ARROWS (FG = prev BG, BG = next BG) ------------------------------------
+A_USER_HOST='\[\e[38;5;27;48;5;45m\]'
+A_HOST_PATH='\[\e[38;5;45;48;5;197m\]'
+A_PATH_GIT='\[\e[38;5;197;48;5;93m\]'
+A_GIT_TIME='\[\e[38;5;93;48;5;226m\]'
+A_TIME_END='\[\e[38;5;226;49m\]'
+
+# --- FUNCTIONS ---------------------------------------------------------------
+parse_git_branch() { git branch 2>/dev/null | sed -n '/\* /s///p'; }
+PROMPT_COMMAND='RET=$?'
+
+# --- BUILD PS1 ---------------------------------------------------------------
+PS1=""
+
+# user → host
+PS1+="${C_USER} \u ${A_USER_HOST}${ARROW}"
+# host → path
+PS1+="${C_HOST} \h ${A_HOST_PATH}${ARROW}"
+# path → git
+PS1+="${C_PATH} \w ${A_PATH_GIT}${ARROW}"
+# git (only when repo)
+PS1+='$(if git rev-parse --is-inside-work-tree &>/dev/null; then \
+          echo -n "${C_GIT}  $(parse_git_branch) ${A_GIT_TIME}${ARROW}"; \
+        fi)'
+# time → end
+PS1+="${C_TIME} \D{%H:%M:%S} ${A_TIME_END}${ARROW}${C_RESET}"
+
+# 2nd line – status
+PS1+='\n$(if [ $RET -eq 0 ]; then \
+             printf "\[\e[38;5;82m\]✔\[\e[0m\]"; \
+           else \
+             printf "\[\e[38;5;196m\]✘\[\e[0m\]"; \
+           fi) '
+
+export PS1
+
